@@ -11,3 +11,19 @@ keywords:
   - "donor coordination"
   - "Leontief preferences"
   - "best-response dynamics"
+doi: "10.5281/zenodo.24564949"
+url: "https://doi.org/10.5281/zenodo.24564949"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24564948"
+    description: "Concept DOI for all versions."
+preferred-citation:
+  type: software
+  title: "Fair best-response dynamics for Leontief donations"
+  authors:
+    - name: "DannyExperiments"
+  version: "1.0.0"
+  date-released: 2026-11-26
+  doi: "10.5281/zenodo.24564949"
+  url: "https://doi.org/10.5281/zenodo.24564949"
+  repository-code: "https://github.com/DannyExperiments/fair-leontief-donation-dynamics"
