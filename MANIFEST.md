@@ -31,3 +31,9 @@ These files form the release inventory. `SHA256SUMS.txt` records their digests a
 - `scripts/verify_repository.py`
 - `verification/logs/replay.txt`
 - `verification/src/replay.py`
+- `visualization/README.md`
+- `visualization/SHA256SUMS.txt`
+- `visualization/fair-leontief-explorer.zip`
+- `visualization/fair-schedule.gif`
+- `visualization/index.html`
+- `visualization/render.py`
