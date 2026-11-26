@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\DeclareMathSizes{8}{8}{8}{8}
+\DeclareMathSizes{9}{9}{8}{8}
+\DeclareMathSizes{10.95}{10.95}{8}{8}
+\title{Fair best-response dynamics for Leontief donations}
+\date{}
+\begin{document}
+\begin{abstract}
+In the finite Leontief donor-coordination model, the aggregate allocation under best responses converges to the unique Nash-welfare allocation whenever each donor moves infinitely often. Waiting times between a donor's moves may be unbounded. We use the known concave potential and prove that at any cluster point the first donor who would change her allocation cannot have a positive limiting gain. This answers Open Problem 5 of Greger's dissertation for general nonnegative weights.
+\end{abstract}
+\maketitle
+\section{The question}
+Donor $i$ has budget $C_i>0$ and nonnegative weights $v_{ix}$ on finitely many projects, with nonempty support $A_i$. For an aggregate $d$, her utility is $u_i(d)=\min_{x\in A_i}d_x/v_{ix}$. Each individual allocation starts at zero. At each round one donor redistributes her entire budget to maximize her utility given the others' contributions. Brandt et al.~\cite[Section 6.1]{brandt} proved aggregate convergence for bounded waiting times, and for binary weights under mere infinite participation. Greger~\cite[Open Problem 5, p.~99]{greger} asks whether Theorem~5.24 of the thesis extends to the latter schedules for all weights.
+
+\begin{theorem}
+If each of finitely many donors is selected infinitely often, the aggregate converges to the unique maximizer of $\prod_i u_i(d)^{C_i}$ among nonnegative allocations of total $\sum_i C_i$. The assertion concerns the aggregate.
+\end{theorem}
+
+\section{A potential on supported allocations}
+Fix the other donors' aggregate $b$. There is a unique $t>0$ such that $\sum_{x\in A_i}(tv_{ix}-b_x)_+=C_i$, where $s_+=\max(s,0)$. The left side is continuous, tends to infinity and increases strictly wherever positive. To attain utility $t$, donor $i$ must contribute at least $(tv_{ix}-b_x)_+$ on each supported project. These lower bounds exhaust the budget, yielding the unique best response $\beta_i(b)$, zero elsewhere. Any larger target is infeasible. The response is continuous: for $b$ in a bounded set the roots are bounded by $(C_i+b_x)/v_{ix}$ for any fixed $x\in A_i$. Every subsequential limit of roots solves the limiting equation and hence equals its unique solution.
+
+After all donors have moved once, their allocations $w_i$ belong to the simplices $K_i$ supported on $A_i$ with mass $C_i$. This need not mean that a donor's last action remains optimal after others have moved. Write $K=\prod_i K_i$, $d(w)=\sum_i w_i$, and use the potential of Brandt et al.~\cite[Eq.~(5)]{brandt}:
+\[
+ \Phi(w)=-\sum_x d_x(w)\log d_x(w)+\sum_i\sum_{x\in A_i}w_{ix}\log v_{ix},
+ \qquad 0\log0=0 .
+\]
+Milchtaich~\cite[Example 9]{milchtaich} identifies the concave potential and its equilibrium interpretation. Restricting this potential to a single donor's supported simplex also yields the coordinate-maximizer interpretation. We include a direct proof on arbitrary slices to identify the aggregate there.
+
+Suppose each $i$ in a subset $J$ is best responding at $w$. Hold all other blocks fixed and take any profile $y$ on the resulting slice. On $D=\bigcup_{i\in J}A_i$, $d_x(w)\ge t_i v_{ix}>0$ whenever $x\in A_i$, with equality if $w_{ix}>0$. Outside $D$ the aggregate is constant. Write $d=d(w)$. Applying the tangent inequality for $-s\log s$ on $D$ gives
+\[
+ \Phi(y)-\Phi(w)\le
+ \sum_{i\in J}\sum_{x\in A_i}
+ \bigl(\log(v_{ix}/d_x)-1\bigr)(y_{ix}-w_{ix})\le 0 .
+\]
+Indeed one can add $\log t_i+1$ to the coefficient within each block since its mass is fixed. The resulting coefficient is nonpositive, and vanishes wherever $w_{ix}>0$. Strict concavity of $-s\log s$ forces $d(y)=d(w)$ whenever equality holds. This also covers $J=\varnothing$.
+
+At the profile obtained immediately after donor $i$ updates, she is best responding. Applying the slice property with $J=\{i\}$ shows that the update uniquely maximizes the potential in her block: equality of aggregates with all other blocks frozen determines her contribution. Let $G_i(w)$ denote the resulting gain. It is continuous, nonnegative, and zero precisely when donor $i$ is already best responding. Moreover it depends only on $(d(w),w_i)$: these determine the other contributions in aggregate, the new best response, the change in entropy and the change in the linear term.
+
+\section{An unbounded gap between updates}
+Elsner, Koltracht and Neumann~\cite[proof of Theorem~1]{ekn} use a first operator outside the fixed set of a cluster point in the convergence theory of paracontractions. Here the needed control is equality of aggregates on a potential-maximizing slice. The argument below establishes it without assuming norm paracontractivity of the donation updates.
+Use $w^t$ for the profile just before round $t$, discarding the finite initialization prefix. The nondecreasing potential on compact $K$ has a finite limit. Its one-step increments tend to zero. Take a cluster point $w^*$, with $w^{t_j}\to w^*$, and let $I$ be the donors already best responding there. If some donor lies outside $I$, let $r_j\ge t_j$ be the first round at which any outside donor moves. Such a round exists by fairness; no bound on $r_j-t_j$ is needed. Pass to a subsequence so that this donor is a fixed $i\notin I$ and $w^{r_j}\to y$. All outside blocks are unchanged up to the instant before round $r_j$, hence agree at $y$ and $w^*$. Both limiting profiles have the same potential. The slice property at $w^*$ yields $d(y)=d(w^*)$. Since also $y_i=w_i^*$, the gain satisfies $G_i(y)=G_i(w^*)>0$. But $G_i(w^{r_j})$ is the actual one-step increment and tends to zero, contradicting continuity. Thus every cluster point is an equilibrium.
+
+For completeness fix any equilibrium $w$ and set $d^*=d(w)$. For every $w_{ix}>0$ we have $d_x^*=t_i v_{ix}$, where $t_i=u_i(d^*)>0$. For any feasible aggregate $d$ with positive utilities,
+\[
+ \sum_i C_i\log\frac{u_i(d)}{t_i}
+ \ \le\sum_{i,x:w_{ix}>0}w_{ix}\left(\frac{d_x}{d_x^*}-1\right)
+ =\sum_{x:d_x^*>0}(d_x-d_x^*)\le0 .
+\]
+The inequality uses $u_i(d)/t_i\le d_x/d_x^*$ on these coordinates and $\log z\le z-1$. Equality forces $d_x=d_x^*$ at every coordinate with positive equilibrium mass, and the budget fixes the others. A zero-utility allocation cannot attain the positive equilibrium product. Compactness supplies an equilibrium cluster point, so the maximizer exists and is unique. Every subsequential limit of the aggregates has that value, proving convergence.
+
+\section*{Evidence and disclosure}
+The finite schedule replay illustrates potential monotonicity and agreement of aggregates. The proof treats every fair infinite schedule. Gia produced the discovery proof; Claude assisted in earlier writing and review, and OpenAI Codex assisted in the present audit and preparation under human direction. Internally reviewed, not peer reviewed.
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

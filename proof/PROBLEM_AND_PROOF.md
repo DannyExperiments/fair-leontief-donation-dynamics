@@ -1,0 +1,11 @@
+# Problem and proof
+
+Must the aggregate allocation converge when every donor moves infinitely often, even if the waiting times have no uniform bound? [Greger, dissertation, Open Problem 5, p. 99](https://mediatum.ub.tum.de/doc/1759811/onlts4hzyc7oqggwzeixzb01l.Matthias%20S.%20Greger.pdf#page=115)
+
+**Theorem.** For finite Leontief donor coordination with positive budgets, nonempty supports and arbitrary nonnegative weights, the aggregate under best responses from zero converges to the unique Nash-welfare allocation for every fair schedule.
+
+Equal potential on a slice fixes the aggregate. Holding the outside donor’s block fixed as well then determines the exact gain at the first outside update.
+
+I checked the unique water-filling response by budget exhaustion, including absent weights and zero aggregate coordinates. The support-restricted product is compact after every donor first moves; their previous allocations need only be feasible at this point. For donors fixed at a cluster point every varying aggregate coordinate is positive there. The entropy tangent bounds the potential on their entire slice, and equality forces only the aggregate to agree. If a donor outside the fixed set exists, fairness supplies a first outside turn after each cluster visit even across unbounded gaps. Compactness and continuity give a limiting pre-update state on the same slice and at the same potential. The outside donor’s old block and the aggregate are unchanged in the limit, which are exactly the two arguments determining her gain. Its strict positivity contradicts vanishing actual increments. Finally, the log-Nash inequality is strict when any positive equilibrium coordinate changes. Equal total mass controls all zero coordinates. This proves uniqueness of the limiting aggregate. No argument depends on individual-profile uniqueness or bounded waiting.
+
+The [complete proof](../paper/manuscript.pdf) is accompanied by its [LaTeX source](../paper/manuscript.tex). Updates read the current contributions of other donors. Fairness requires infinite participation of every donor. The theorem concerns the aggregate and gives no rate or convergence assertion for the individual contribution vectors.
