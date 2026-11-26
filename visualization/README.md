@@ -18,7 +18,7 @@ In round 8, the two other donors contribute 11/16 to X and 9/32 to Z. C puts her
 
 After round 8, holding C’s full unit on Z, A’s next Y contribution is half B’s prior Z contribution. B then puts half A’s new Y contribution on Z. A’s X contribution increases and B’s Z contribution decreases. Hence the round-8 inequality `(1 + B_Z)/2 ≤ A_X` continues to hold whenever C plays again. Each C turn leaves her allocation fixed. After the first such pair, both `A_Y` and `B_Z` shrink by a factor of four per additional A–B pair. The total tends to `(1, 1, 1)`.
 
-The full theorem guarantees aggregate convergence for every fair schedule with arbitrary weights. Its proof freezes the outside blocks up to the first outside update and uses equality of potential on the slice to identify the limiting aggregate. [Paper and reference](https://doi.org/10.5281/zenodo.24564949)
+The full theorem guarantees aggregate convergence for every fair schedule with arbitrary weights. Its proof freezes the outside blocks up to the first outside update and uses equality of potential on the slice to identify the limiting aggregate. [Paper and reference](https://doi.org/10.5281/zenodo.24565854)
 
 ## Replay
 

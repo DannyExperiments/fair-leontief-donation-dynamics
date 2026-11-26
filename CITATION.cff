@@ -4,15 +4,15 @@ title: "Fair best-response dynamics for Leontief donations"
 authors:
   - name: "DannyExperiments"
 type: software
-version: "1.0.0"
+version: "1.0.1"
 date-released: 2026-11-26
 repository-code: "https://github.com/DannyExperiments/fair-leontief-donation-dynamics"
 keywords:
   - "donor coordination"
   - "Leontief preferences"
   - "best-response dynamics"
-doi: "10.5281/zenodo.24564949"
-url: "https://doi.org/10.5281/zenodo.24564949"
+doi: "10.5281/zenodo.24565854"
+url: "https://doi.org/10.5281/zenodo.24565854"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.24564948"
@@ -22,8 +22,8 @@ preferred-citation:
   title: "Fair best-response dynamics for Leontief donations"
   authors:
     - name: "DannyExperiments"
-  version: "1.0.0"
+  version: "1.0.1"
   date-released: 2026-11-26
-  doi: "10.5281/zenodo.24564949"
-  url: "https://doi.org/10.5281/zenodo.24564949"
+  doi: "10.5281/zenodo.24565854"
+  url: "https://doi.org/10.5281/zenodo.24565854"
   repository-code: "https://github.com/DannyExperiments/fair-leontief-donation-dynamics"
