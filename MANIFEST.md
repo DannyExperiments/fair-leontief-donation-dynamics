@@ -3,6 +3,7 @@
 These files form the release inventory. `SHA256SUMS.txt` records their digests and is excluded from its own ledger.
 
 - `.gitattributes`
+- `.github/workflows/lean.yml`
 - `.github/workflows/pdf.yml`
 - `.github/workflows/replay.yml`
 - `.github/workflows/verify.yml`
@@ -22,6 +23,10 @@ These files form the release inventory. `SHA256SUMS.txt` records their digests a
 - `STATUS.md`
 - `audits/public_safe_reports/LITERATURE_AUDIT.md`
 - `audits/public_safe_reports/MATHEMATICAL_AUDIT.md`
+- `formalization/Q132Water.lean`
+- `formalization/README.md`
+- `formalization/expected-axioms.txt`
+- `formalization/lean-toolchain`
 - `paper/BUILD.md`
 - `paper/manuscript.pdf`
 - `paper/manuscript.tex`
